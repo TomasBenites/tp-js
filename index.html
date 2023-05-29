@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conferencia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        .row {
+            --bs-gutter-x: 0rem;
+        }
+
+        .card-img {
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <navbar>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light ms-auto me-auto" href="#">
+                    <img src="/img/codoacodo.png" alt="Logo" width="70" height="40" class="d-inline-block">
+                    Conf Bs As
+                </a>
+                <ul class="nav justify-content-end ms-auto me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" href="#">Los oradores</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-white-50" href="#">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white-50" href="#">Conviértete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="#venta">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </navbar>
+
+    <div class="container col-7 mt-4">
+        <div class="row justify-content-center">
+            <div class="col mb-1">
+                <div class="card text-center border border-primary" style="height: 15rem; width: 15rem;">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">Estudiante</h5>
+                        <p class="card-text mt-4" style="max-height: 4.5em; font-size: 16px;">Tienen un
+                            descuento</p>
+                        <p class="card-text mt-4 fw-bold" style="font-size: 15px;">80%</p>
+                        <p class="card-text mt-4 text-muted">presentar documentación*</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-1">
+                <div class="card text-center border-info" style="height: 15rem; width: 15rem;">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">Trainee</h5>
+                        <p class="card-text mt-4" style="max-height: 4.5em; font-size: 16px;">Tienen un
+                            descuento</p>
+                        <p class="card-text mt-4 fw-bold" style="font-size: 15px;">50%</p>
+                        <p class="card-text mt-4 text-muted">presentar documentación*</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-1">
+                <div class="card text-center border-warning" style="height: 15rem; width: 15rem;">
+                    <div class="card-body mt-3">
+                        <h5 class="card-title">Junior</h5>
+                        <p class="card-text mt-4" style="max-height: 4.5em; font-size: 16px;">Tienen un
+                            descuento</p>
+                        <p class="card-text mt-4 fw-bold" style="font-size: 15px;">15%</p>
+                        <p class="card-text mt-4 text-muted">presentar documentación*</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container mt-2 mb-4" id="venta">
+        <div class="col-12 text-center">
+            <span>VENTA</span>
+            <h2>VALOR DE TICKET 200$</h2>
+        </div>
+        </div>
+        </div>
+    </section>
+    <form>
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-4 pe-md-3 pe-sm-auto">
+                <input type="text" class="form-control mb-1" placeholder="Nombre">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-8">
+                <input type="email" class="form-control w-100 mt-3 mb-3" placeholder="Correo">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-4 pe-md-3 pe-sm-auto">
+                <label class="mb-2">Cantidad</label>
+                <input type="number" id="PesosIngresados" class="form-control mb-1" placeholder="cantidad">
+            </div>
+            <div class="col-sm-4">
+                <label class="mb-2">Categoría</label>
+                <select class="form-control" id="categoria">
+                    <option value="">---</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="trainee">Trainee</option>
+                    <option value="junior">Junior</option>
+                </select>
+            </div>
+            <div id="total-pesos" class="bg-primary-subtle rounded p-3 text-primary col-8 mb-3 mt-4">
+                Total a Pagar:
+              </div>
+            <div class="form-group row justify-content-center mt-3">
+                <div class="col-sm-4 pe-md-3 pe-sm-auto">
+                    <button class="form-control mb-1 btn btn-success opacity-75 mb-4" 
+                    type="">
+                    Borrar
+                </button>
+                </div>
+                <div class="col-sm-4">
+                    <button class="form-control btn btn-success opacity-75 mb-4" 
+                    id="resumen"
+                    type="button">
+                    Resumen
+                </button>
+                </div>
+            </div>
+    </form>
+
+
+    <footer class="text-center" style="background: linear-gradient(to right, #1C3643, #1E5372)">
+        <div class="container text-white d-flex flex-column justify-content-between 
+        align-items-center align-content-center py-4 flex-md-row" 
+        id="container-footer">
+            <a class="text-center link-light text-decoration-none" 
+            href="#">
+            Preguntas frecuentes
+            </a>
+            <a class="link-light text-decoration-none" 
+            href="#">
+            Contáctanos
+            </a>
+            <a class="link-light text-decoration-none" 
+            href="#">
+            Prensa
+            </a>
+            <a class="link-light text-decoration-none" href="#">
+                Conferencias
+            </a>
+            <a class="link-light text-decoration-none" href="#">
+                Términos y condiciones
+            </a>
+            <a class="link-light text-decoration-none" href="#">
+                Privacidad
+            </a>
+            <a class="link-light text-decoration-none" href="#">
+                Estudiantes
+            </a>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- java -->
+    <script src="/js/descuentos.js"></script>
+</body>
+
+</html>
